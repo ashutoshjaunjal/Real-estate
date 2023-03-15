@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+html{
+    font-size: 62%;
+    overflow-x: hidden;
+    scroll-padding-top:7rem;
+    scroll-behavior: smooth;
+}
+body{
+    background: #f7f7f7;
+}
+.btn{
+    padding: 0.8rem 3.5rem;
+    color: #ff5a3c;
+    background: #f9edeb;
+    display: inline-block;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;text-align: center;
+}
+.btn:hover{
+    background: #ff5a3c;
+    color: #fff;
+}
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #0D47A1;
+    padding-bottom: 3rem;
+}
+.heading span{
+    color: #ff5a3c;
+    padding: 0.3rem 1.2rem;
+    background: #f9edeb;
+    border-radius: 0.8rem;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 8%;
+    z-index: 1;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+}
+header .logo{
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: #01579B;
+}
+header .logo span{
+    color: #ff5a3c;
+}
+header .navbar a{
+    color: #0D47A1;
+    font-size: 2rem;
+    padding: 0 1.5rem;
+}
+header .navbar a:hover{
+    color: #ff5a3c;
+}
+header .icons #menu-bars,
+header .icons a{
+    height: 4.5rem;
+    width: 5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    text-align:center;
+    margin-right: 0.5rem;
+    color: #ff5a3c;
+    background: #bbdefb;
+    border-radius: 0.5rem;
+}
+header .icons #menu-bars:hover,
+header .icons a:hover{
+    color: #fff;
+    background: #01579B;
+}
+header .icons #menu-bars{
+    display: none;
+}
+
+/*Home section*/
+section{
+    padding: 2rem 8%; 
+}
+
+.home{
+    min-height: 100vh;
+    background: url(images/bac.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home form{
+    margin-top: 7rem;
+    background: #fff;
+    padding: 2rem;
+    width: 70rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    border: 0.1rem solid rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+}
+.home form h3{
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+}
+.home form .buttons-container{
+    display: flex;
+    grid-gap: 1.5rem;
+}
+.home form .buttons-container .btn{
+    flex: 1;    
+}
+.home form .inpuBox{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 1.5rem;
+    margin-top: 2rem;
+}
+.home form .inpuBox input,
+.home form .inpuBox select{
+    flex: 1 1 25rem;
+    border: 0.1rem solid rgba(0,0,0,0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-transform: none;
+}
+.home form .btn{
+    width: 100%;
+    margin-top: 2rem;
+    border: none;
+}
+
+/*Services Section*/
+
+.services .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 1.5rem;
+}
+.services .box-container .box{
+    flex: 1 1 30rem;
+    background: #fff;
+    border: 0.1rem solid rgba(0,0,0,0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 2.1rem;
+}
+.services .box-container .box h3{
+    color: #333;
+    font-size: 2.4rem;
+}
+.services .box-container .box p{
+    color: #666;
+    font-size: 1.5rem;
+    padding: 2.2rem 0rem;
+    line-height: 2;
+}
+
+/*Featured Section*/
+
+.featured .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 1.5rem;
+}
+.featured .box-container .box{
+    flex: 1 1 30rem;
+    background: #fff;
+    border: 0.1rem solid rgba(0,0,0,0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.featured .box-container .box .img-container{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 25rem;
+}
+.featured .box-container .box .img-container img{
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+    object-fit: cover;  
+}
+.featured .box-container .box:hover .img-container img{
+    transform: scale(1.1); 
+}
+.featured .box-container .box .img-container .info{
+    position: absolute;
+    display: flex;
+    top: 1rem;
+    left:0;
+}
+.featured .box-container .box .img-container .info h3{
+    font-weight: 500;
+    color: white;
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    background: rgba(0,0,0,0.3);
+    border-radius: 0.6rem;
+    padding: 0.5rem 1.5rem;
+}
+.featured .box-container .box .img-container .icon{
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    display: flex;
+}
+.featured .box-container .box .img-container .icon a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+    background: rgba(0,0,0,0.3);
+    border-radius: 0.6rem;
+    padding: 0.7rem 0.8rem;
+}
+.featured .box-container .box .img-container .icon a:hover{
+    background: #ff5a3c;
+}
+.featured .box-container .box .img-container .icon a h3{
+    margin-left: 0.5rem;
+    font-weight: 500;
+}
+.featured .box-container .box .content{
+    padding: 1.5rem;
+}
+.featured .box-container .box .content .price{
+    display: flex;
+    align-items: center;
+}
+.featured .box-container .box .content .price h3{
+    font-size: 2rem;
+    color: #ff5a3c;
+    margin-right: auto;
+}
+.featured .box-container .box .content .price a{
+    color: #666;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 0.5rem;
+    background: #f7f7f7;
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+    line-height: 4rem;
+}
+.featured .box-container .box .content .price a:hover{
+    color: #fff;
+    background: #ff5a3c;
+}
+.featured .box-container .box .locations{
+    padding: 1rem 0;
+}
+.featured .box-container .box .locations h3{
+    font-size: 2.4rem;
+    color: #333;
+}
+.featured .box-container .box .locations p{
+    font-size: 1.5rem;
+    color: #666;
+    padding-top: 0.5rem;
+    line-height: 1.5;
+}
+.featured .box-container .box .details{
+    padding: 0.5rem 0;
+    display: flex;
+    margin-bottom: 1.8rem;
+}
+.featured .box-container .box .details h3{
+    flex: 1;
+    color: #999;
+    border:0.1rem solid rgba(0,0,0,0.1);
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+.featured .box-container .box .details h3 i{
+    color: #333;
+    margin-right: 0.4rem;
+}
+.featured .box-container .box .buttons{
+    display: flex;
+    flex: 1;
+    grid-gap: 1rem;
+    text-align: center;
+}
+.featured .box-container .box .buttons .btn{
+    display: flex;
+    font-size: 1.4rem;
+}
+/*agents*/
+
+.agents .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 1.5rem;
+    justify-content: center;
+}
+.agents .box-container .box{
+    background: #fff;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    position: relative;
+    width: 26rem;
+    padding: 2rem;
+}
+
+.agents .box-container .box .fa-envelope{
+    position: absolute;
+    top: 1.8rem;
+    left: 2rem;
+    color: #333;
+    font-size: 2rem;
+}
+.agents .box-container .box .fa-envelope:hover{
+    color: #ff5a3c;
+}
+.agents .box-container .box .fa-phone{
+    position: absolute;
+    top: 1.8rem;
+    right: 2rem;
+    color: #333;
+    font-size: 2rem;
+}
+.agents .box-container .box .fa-phone:hover{
+    color: #ff5a3c;
+}
+.agents .box-container .box img{
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem 0;
+    border: 0.6rem solid rgba(0, 0, 0, 0.1);
+    object-fit: cover;  
+
+}
+.agents .box-container .box h3{
+    font-size: 2rem;
+    color:#333;
+}
+
+.agents .box-container .box span{
+    font-size: 1.7rem;
+    color:#ff5a3c;
+}
+
+.agents .box-container .box .share{
+    padding-top: 2rem;
+}
+
+.agents .box-container .box .share a{
+    margin:0 .3rem;
+    height:4rem;
+    width:4rem;
+    line-height: 4rem;
+    background:#f7f7f7;
+    color:#666;
+    border-radius: .5rem;
+    font-size: 2rem;
+}
+
+.agents .box-container .box .share a:hover{
+    background:#ff5a3c;
+    color:#fff;
+}
+
+/*contact starts*/
+
+.contact .icons_container{
+    display: flex;
+    flex: wrap;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.contact .icons_container .icons{
+    flex: 1 1 25rem;
+    text-align: center;
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.contact .icons_container .icons h3{
+    font-size: 2.5rem;
+    color: #333;
+    padding: 1rem 0;
+}
+
+.contact .icons_container .icons p{
+    font-size: 1.5rem;
+    color: #666;
+    padding: 2px 0;
+}
+
+.contact .row{
+    background: white;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap-reverse;
+
+}
+.contact .row form{
+    flex: 1 1 50rem;
+    padding: 0.5rem 1rem;
+}
+
+.contact .row .map{
+    flex: 1 1 30rem;
+}
+.contact .row form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact .row form textarea,
+.contact .row form .inputBox input{
+    margin-top: 1rem;
+    padding:1rem;
+    font-size: 1.7rem;
+    color:#333;
+    background: #f7f7f7;
+    border-radius: .5rem;
+    text-transform: none;
+    width:49%;
+    border: none;
+}
+
+.contact .row form textarea{
+    width:100%;
+    height:20rem;
+    resize: none;
+}
+
+.contact .row form .btn{
+    border: none;
+}
+
+.contact .row form textarea:focus,
+.contact .row form .inputBox input:focus{
+    background-color: #f9edeb;
+}
+
+/*footer*/
+
+.footer .footer-container{
+    background:#fff;
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding:2rem;
+}
+ 
+.footer .footer-container .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.footer .footer-container .box-container .box{
+    flex:1 1 25rem;
+}
+
+.footer .footer-container .box-container .box h3{
+    font-size: 2.5rem;
+    color:#333;
+    padding:.5rem 0;
+}
+
+.footer .footer-container .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    color:#666;
+    padding:.5rem 0;
+}
+
+.footer .footer-container .box-container .box a:hover{
+    color:#ff5a3c;
+    text-decoration: underline;
+}
+
+.footer .footer-container .credit{
+    margin-top: 2rem;
+    padding:.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
+    color:#333;
+    border-top: .1rem solid rgba(0,0,0,.1);
+}
+
+.footer .footer-container .credit span{
+    color:#ff5a3c;
+}
+
+.footer .footer-container {
+    margin-bottom: 8rem;
+}
+
+
+
+
+
+
+
+@media (max-width: 991px){
+
+    html{
+    font-size: 55%;
+    }
+
+    header{
+        padding: 1.5rem 1rem;
+    }
+    section{
+        padding: 1.5rem ;
+    }
+}
+
+@media (max-width: 768px){
+
+    header .icons #menu-bars{
+    display: inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: #f7f7f7;
+        border-top: 0.1rem solid #333;
+        border-bottom: 0.1rem solid #333;
+        transition: 0.2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
+    }
+    header .navbar a{
+        display: block;
+        padding: 1.3rem;
+        margin: 1.5rem;
+        background: #fff;
+        border: 0.2rem solid #2196f361;
+        border-radius: 0.4rem;
+        box-shadow: 0 0.5rem 1rem rgb(187 222 251);
+
+    }
+    header .navbar a:hover{
+        box-shadow: 0 0.5rem 1rem #FFCCBC;
+
+    }
+
+}
+@media (max-width: 450px){
+    html{
+    font-size: 55%;
+    }
+}
